@@ -1,8 +1,0 @@
-cart_entries: 	(fk)cart_entries_to_cart -> OnUpdate = Cascade; OnDelete = Cascade;
-		(fk)cart_entries_to_product -> OnUpdate = NoAction; OnDelete = NoAction;
-
-cart: 	(fk)fk_Cart_user -> OnUpdate = NoAction; OnDelete = OnAction;
-	(fk)fk_cart_website -> OnUpdate = NoAction; OnDelete = NoAction;
-
-orders: (fk)fk_Order_Cart -> OnUpdate = Cascade; OnDelete = Cascade;
-	(fk)fk_* -> OnUpdate = NoAction; OnDelete = NoAction;
