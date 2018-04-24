@@ -1,7 +1,6 @@
 package it.sopra.stage.fullmoda.model;
 
 import java.io.Serializable;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.persistence.CascadeType;
@@ -13,8 +12,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-
-import org.springframework.format.annotation.DateTimeFormat;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -117,13 +114,16 @@ public class User implements Serializable {
 		this.address = address;
 	}
 
-	public User(String name, String surname, String customerType, String email, String password,
-			boolean privacyAgreement) {
+	public User(String name, String surname, String customerType, String email, String password, Date birthDate, Address address,
+			boolean privacyAgreement, String image) {
 		this.name = name;
 		this.surname = surname;
 		this.customerType = customerType;
 		this.email = email;
 		this.password = password;
+		this.birthDate = birthDate;
+		this.address = address;
 		this.privacyAgreement = privacyAgreement;
+		this.image = image;
 	}
 }

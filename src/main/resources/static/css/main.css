@@ -22,7 +22,7 @@ body {
 	margin-top:-2vw;
 	margin-bottom:2vw;
 	display:inline-block;
-	font-size:1.3vw!important;
+	font-size:0.9vw!important;
 }
 .uppercase{
 	text-transform: uppercase;
@@ -41,8 +41,12 @@ footer {
 
 .jumbotron {
 	margin-bottom:0px;
+	padding-top:0px!important;
 }
 
+.map{
+	margin-left:10vw;
+}
 /* NAVBAR
 -------------------------------------------------- */
 nav {
@@ -72,7 +76,7 @@ span.num {
   right: 1px;
 }
 .navbar{
-	min-height:150px;
+	min-height:120px;
 }
 .navbar-header{
 	width:100%;
@@ -340,6 +344,7 @@ h3{
 	background: #22222200;
 	width:100%;
 	border: 0px;
+	font-size:1.1vw!important;
 	border-radius:20px;
 }
 .hoverInfo:hover, .hoverInfo:active 
@@ -354,7 +359,7 @@ h3{
 --------------------------------------------*/
 .img_profile{
 	width:20%;
-	margin:2% auto;
+	margin:0.7vw auto;
 }
 
 .btn_file{
@@ -363,7 +368,8 @@ h3{
 	float:right;
 }
 .form-edit{
-	margin:0 auto;
+	margin:5vw auto;
+	margin-bottom:0;
 	width:25%;
 	z-index:1;
 }
@@ -392,14 +398,11 @@ input[type="file"] {
 	padding:6px 12px;
 	border-radius:4px;
 }
-.row_accview{
-	margin-top:-4%;
-}
 .div-master{
 	border: 1px solid black;
 	border-radius: 20px;
 	margin: 0 auto;
-	width: 50%;
+	width: 40%;
 }
 
 .th-info{
@@ -433,7 +436,6 @@ input[type="file"] {
 }
 
 .acc_th, .acc_td {
-  padding: 0.5%!important;
   background: #2222226e!important;
   border-bottom: 2px solid white!important; 
 }
@@ -443,18 +445,15 @@ input[type="file"] {
   clear: both;
 }
 
-body {
-  margin: 1.5em;
-}
 /*= input focus effects css
 =========================== */
 :focus{outline: none;}
 
 .col-3{margin-bottom:2vw; width: 100%; z-index:1; position: relative;} /* necessary to give position: relative to parent. */
-input[type="password"]{font: 1.3vw Arial; color: #333; width: 100%; box-sizing: border-box; letter-spacing: 1px;}
-input[type="text"]{font: 1.3vw Arial; color: #333; width: 100%; box-sizing: border-box; letter-spacing: 1px;}
-input[type="tel"]{font: 1.3vw Arial; color: #333; width: 100%; box-sizing: border-box; letter-spacing: 1px;}
-input[type="date"]{font: 1.3vw Arial; color: #333; width: 100%; box-sizing: border-box; letter-spacing: 1px;}
+input[type="password"]{font: 1.1vw Arial; color: #333; width: 100%; box-sizing: border-box; letter-spacing: 1px;}
+input[type="text"]{font: 1.1vw Arial; color: #333; width: 100%; box-sizing: border-box; letter-spacing: 1px;}
+input[type="tel"]{font: 1.1vw Arial; color: #333; width: 100%; box-sizing: border-box; letter-spacing: 1px;}
+input[type="date"]{font: 1.1vw Arial; color: #333; width: 100%; box-sizing: border-box; letter-spacing: 1px;}
 
 .effect-21{border: 1px solid #ccc; padding: 7px 14px; transition: 0.4s; background: transparent;}
 .effect-21 ~ .focus-border:before,
@@ -475,8 +474,8 @@ input[type="date"]{font: 1.3vw Arial; color: #333; width: 100%; box-sizing: bord
 .has-content.effect-21 ~ .focus-border i:after{height: 100%; transition: 0.2s;}
 .effect-21:focus ~ .focus-border i:after,
 .has-conten.effect-21 ~ .focus-border i:after{transition-delay: 0.4s;}
-.effect-21 ~ label{position: absolute; left: 14px; width: 100%; font-size:1.3vw; top: 4px; color: #aaa; transition: 0.3s; z-index: -1; letter-spacing: 0.5px;}
-.effect-21:focus ~ label, .has-content.effect-21 ~ label{top: -2vw; left: 0; font-size: 1.3vw; color: #000; transition: 0.3s;}
+.effect-21 ~ label{position: absolute; left: 14px; width: 100%; font-size:1.1vw; top: 4px; color: #aaa; transition: 0.3s; z-index: -1; letter-spacing: 0.5px;}
+.effect-21:focus ~ label, .has-content.effect-21 ~ label{top: -1.7vw; left: 0; font-size: 1.1vw; color: #000; transition: 0.3s;}
 
 /* SNACKBAR
 --------------------------------------------*/

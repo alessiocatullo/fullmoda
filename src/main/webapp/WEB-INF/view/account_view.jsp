@@ -156,7 +156,7 @@
 	
  </script>
 <t:template>
-	<div class="row row_accview">
+	<div class="row">
 		<input id="profile_pic" type="image" onclick="changeImg()" src="${user.image}" alt="${user.name} ${user.surname}" class="img_profile img-responsive img-rounded" />
 		<input style="visibility:hidden;" id="file-upload" accept=".png,.jpeg,.jpg" onchange="readURL(this)" type="file"/>
 	</div>
@@ -176,7 +176,7 @@
 			<td class="acc_td">
 				<div class="col-sm-6">
 					<p class="p-nome">Indirizzo:</p> <br/> 
-					<p class="nomesub"><c:out value="${user.address.line1}, ${user.address.zipCode}, ${user.address.town}"/></p>				
+					<p class="nomesub"><c:out value="${user.address.line1} ${user.address.zipCode} ${user.address.town}"/></p>				
 				</div>
 				<div class="col-sm-6">
 					<a href="account_address" class="hoverInfo hoverButton">${edit_address} </a> 

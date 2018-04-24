@@ -21,7 +21,7 @@ public class NameFormValidator implements Validator {
     {
     	NameForm user = (NameForm) target;
     	
-		if(user.getFiscalcode().length() != 16) {
+		if(user.getFiscalcode().length() != 16 && user.getFiscalcode() != "") {
 			 errors.rejectValue("fiscalcode", "error.fiscalcode");
 	  	}
 

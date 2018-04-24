@@ -1,9 +1,8 @@
-<%@tag description="Fullmoda Page template" pageEncoding="UTF-8"%>
 <!doctype html>
-<html lang="en">
+<html>
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
