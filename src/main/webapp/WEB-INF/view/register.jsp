@@ -25,11 +25,11 @@
 	        <form:errors path="email" cssClass="error"/>
 	        
 	        <label for="password" class="sr-only"><spring:message code = "register.page.label.password"/></label>
-	        <form:input path="password" class="form-control" placeholder="${password}"/>
+	        <form:input path="password" type="password" class="form-control" placeholder="${password}"/>
 	        <form:errors path="password" cssClass="error"/>
 	        
 	        <label for="passwordConfirmation" class="sr-only"><spring:message code = "register.page.label.passwordConfirmation"/></label>
-	        <form:input path="passwordConfirmation" class="form-control" placeholder="${passwordConfirmation}"/>
+	        <form:input path="passwordConfirmation" type="password" class="form-control" placeholder="${passwordConfirmation}"/>
 	        <form:errors path="passwordConfirmation" cssClass="error"/>
 	        
 	        <label for="name" class="sr-only"><spring:message code = "register.page.label.name"/></label>

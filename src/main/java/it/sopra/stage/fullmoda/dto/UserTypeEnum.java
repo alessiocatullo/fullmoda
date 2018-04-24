@@ -5,7 +5,8 @@ import lombok.Data;
 @Data
 public class UserTypeEnum {
 
-	public enum USERTYPE {CUSTOMER, ADMINISTRATOR};
-	
-	
+	public enum USERTYPE {
+		CUSTOMER, ADMINISTRATOR
+	};
+
 }

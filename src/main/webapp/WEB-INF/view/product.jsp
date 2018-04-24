@@ -54,7 +54,3 @@
 			</div>
 	</div>
 </t:template>
-
-<script>
-
-</script>

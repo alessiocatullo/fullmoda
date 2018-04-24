@@ -142,7 +142,7 @@ public class FullmodaApplicationTests {
 		Address address = new Address("", "via filippo lippi 1", "", "20180", "roma", country);
 		AddressRepository addressRepos = context.getBean(AddressRepository.class);
 		addressRepos.save(address);
-		User user = new User("gigetto", "luigi", "di maio", "CUSTOMER", "giggetto@yopmail.com", "04908304593", null, null, true, null, address);
+		User user = new User("gigetto", "luigi", "di maio", "CUSTOMER", "giggetto@yopmail.com", "04908304593", null, null, true, null, address, null);
 		userRepos.save(user);
 	}
 	

@@ -26,7 +26,8 @@ public class CartController {
 
 	@Autowired
 	private CartFacade cartFacade;
-	@Autowired
+
+  @Autowired
 	private DefaultProductFacade productFacade;
 	
     @RequestMapping(value = "/addCart-{code}", method=RequestMethod.GET)

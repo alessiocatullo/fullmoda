@@ -2,6 +2,7 @@ package it.sopra.stage.fullmoda.controllers;
 
 import java.util.Locale;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.apache.log4j.Logger;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import it.sopra.stage.fullmoda.dto.CartData;
 import it.sopra.stage.fullmoda.dao.CartRepository;
 import it.sopra.stage.fullmoda.dao.UserRepository;
 import it.sopra.stage.fullmoda.dto.UserData;
@@ -45,32 +47,31 @@ public class RegisterController {
 	}
 	
 	@RequestMapping(value="/register", method = RequestMethod.POST)
-	public String doRegister(@Valid @ModelAttribute("registerForm") RegisterForm registerForm, BindingResult bindingResult, Model model){
+	public String doRegister(@Valid @ModelAttribute("registerForm") RegisterForm registerForm, BindingResult bindingResult, Model model, HttpServletRequest request){
 		Locale currentLocale = LocaleContextHolder.getLocale();
 		if (bindingResult.hasErrors()) {
 			LOG.warn(String.format("Validation error on register page, found %s errors", bindingResult.getErrorCount()));
 			return "register";
 		}
 		UserData userData = null;
+		CartData cartData = null;
 		try {
 			userData = authFacade.register(registerForm, UserTypeEnum.USERTYPE.CUSTOMER);
+			cartData = authFacade.newCart(userData);
 		} catch (UserAlreadyRegistered e) {
 			LOG.warn(String.format("User already registered, input parameters:%s", registerForm.toString()));
 			bindingResult.addError(new ObjectError("globalerrors", messageSource.getMessage("register.page.already.registered.error",
 					null, currentLocale)));
 			return "register";
 		}
-		if(userData == null) {
+		if(userData == null || cartData == null) {
 			LOG.warn(String.format("User not saved, input parameters:%s", registerForm.toString()));
 			bindingResult.addError(new ObjectError("global.error", messageSource.getMessage("register.page.generic.error",
 					null, currentLocale)));
 			return "register";
 		}
 		model.addAttribute("user", userData);
-		return "redirect:/my-account";
-	}
-	
-
-	
-	
+		request.getSession().setAttribute("cart", cartData);
+		return "redirect:/account_view";
+	}	
 }

@@ -1,6 +1,7 @@
 package it.sopra.stage.fullmoda.model;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.persistence.CascadeType;
@@ -12,6 +13,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -62,10 +65,13 @@ public class User implements Serializable {
 	@OneToOne (cascade= CascadeType.ALL)
 	@JoinColumn(name="address")
 	private Address address;
+	
+	@Column(name="image")
+	private String image;
 
 	public User(String name, String surname, String customerType, String email,
 			String password, String phoneNumber, Date birthDate, String birthPlace, boolean privacyAgreement,
-			String fiscalCode, Address address) {
+			String fiscalCode, Address address, String image) {
 	
 		this.name = name;
 		this.surname = surname;
@@ -78,8 +84,38 @@ public class User implements Serializable {
 		this.privacyAgreement = privacyAgreement;
 		this.fiscalCode = fiscalCode;
 		this.address = address;
+		this.image = image;
+	}
+	
+	public User(long id, String name, String surname, String phonenumber, Date birthDate, String birthplace, String fiscalcode) {
+		this.id = id;
+		this.name = name;
+		this.surname = surname;
+		this.phoneNumber = phonenumber;
+		this.birthDate = birthDate;
+		this.birthPlace = birthplace;
+		this.fiscalCode = fiscalcode;
+	}
+	
+	public User(long id, String psw_email_img, int dummy) {
+		if (dummy == 2) {
+			this.id = id;
+			this.password = psw_email_img;
+		}
+		else if ( dummy == 1){
+			this.id = id;
+			this.image = psw_email_img;
+		}
+		else if ( dummy == 0){
+			this.id = id;
+			this.email = psw_email_img;
+		}
 	}
 
+	public User(long id, Address address) {
+		this.id = id;
+		this.address = address;
+	}
 
 	public User(String name, String surname, String customerType, String email, String password,
 			boolean privacyAgreement) {
@@ -90,8 +126,4 @@ public class User implements Serializable {
 		this.password = password;
 		this.privacyAgreement = privacyAgreement;
 	}
-	
-	
-	
-
 }

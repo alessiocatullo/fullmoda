@@ -14,24 +14,23 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name="size_product")
+@Table(name = "size_product")
 @Data
 @NoArgsConstructor
-public class SizeVariantProduct implements Serializable{
+public class SizeVariantProduct implements Serializable {
 
 	private static final long serialVersionUID = 806855520003430882L;
-	
+
 	@Id
 	private String code;
-	
-	@OneToOne(cascade= {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
-	@JoinColumn(name="size")
+
+	@OneToOne(cascade = { CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+	@JoinColumn(name = "size")
 	private Size size;
-	
-	@ManyToOne (cascade=CascadeType.ALL)
-	@JoinColumn(name="baseproduct")
+
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "baseproduct")
 	private ColorVariantProduct colorVariantProduct;
-	
 
 	public ColorVariantProduct getColorVariantProduct() {
 		return colorVariantProduct;

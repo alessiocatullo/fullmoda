@@ -24,6 +24,6 @@ public interface ProductService {
 	ColorVariantProduct findBySizeColor(String code);
 	
 	SizeVariantProduct findSize (String sizeCode);
-	
+
 	SizeVariantProduct findBySizeAndColorVariantProduct(String codeSize, String codeColor);
 }

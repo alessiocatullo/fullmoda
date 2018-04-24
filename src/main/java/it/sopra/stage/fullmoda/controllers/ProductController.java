@@ -16,17 +16,16 @@ import it.sopra.stage.fullmoda.facade.ProductFacade;
 @Controller
 public class ProductController {
 
-	
 	@Autowired
 	private ProductFacade productFacade;
-	
+  
 	@RequestMapping(value= {"/products"}, method=RequestMethod.GET)
 	public String getProducts(Model model){
 		List<ProductData> productList = productFacade.getProductList();
 		model.addAttribute("productList", productList);
-		return "full_product_list";	
+		return "full_product_list";
 	}
-	
+  
 	@RequestMapping(value="/p-{productCode}", method=RequestMethod.GET)
 	public String getProduct(@PathVariable("productCode") String productCode, Model model) {
 		ProductData productData = productFacade.findProduct(productCode);

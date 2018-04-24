@@ -8,4 +8,5 @@ public interface CartRepository extends JpaRepository<Cart, Long> {
 	
 	Cart findByUserId(long i);
 	Cart findById(long i);
+
 }

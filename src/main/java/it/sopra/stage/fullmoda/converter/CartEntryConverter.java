@@ -12,8 +12,8 @@ public class CartEntryConverter {
 
 	@Autowired
 	private SizeVariantProductConverter sizeProductConverter;
-	
-	public CartEntryData convert (CartEntry entry) {
+
+	public CartEntryData convert(CartEntry entry) {
 		Long entryId = entry.getEntryId();
 		int quantity = entry.getQuantity();
 		SizeVariantProductData sizeProductData = sizeProductConverter.convert(entry.getProduct());
