@@ -61,7 +61,7 @@
 							                  <span class="glyphicon glyphicon-minus"></span>
 							              </button></a>
 							          </span>
-							          <input type="text" name="quant[1]" class="form-control input-number text-center" readonly value="${var.quantity}">
+							          <input type="text" name="quant[1]" class="form-control-cart input-number text-center" readonly value="${var.quantity}">
 							          <span class="input-group-btn">
 							              <a href="addCart-1-${var.id}" class="${ var.quantity>19 ? 'disable' : ''}"><button type="button" class="btn btn-default btn-number" data-type="plus">
 							                  <span class="glyphicon glyphicon-plus"></span>
