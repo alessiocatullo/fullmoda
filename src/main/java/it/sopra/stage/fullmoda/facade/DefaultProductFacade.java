@@ -74,4 +74,14 @@ public class DefaultProductFacade implements ProductFacade {
 		return productDataList;
 	}
 
+	@Override
+	public ProductData findFromSize(String size) {
+		BaseProduct base = productService.findFromSize(size);
+		ProductData baseData = null;
+		if(base != null) {
+			baseData = productConverter.convert(base);
+		}
+		return baseData;
+	}
+
 }

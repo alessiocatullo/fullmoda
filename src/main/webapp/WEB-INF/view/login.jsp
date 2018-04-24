@@ -15,8 +15,7 @@
 
 <t:template>
 <div class="row">
-	<div class="col-sm-6">
-      <form:form action="login" method="POST" commandName="loginForm" class="form-signin">
+	<form:form action="login" method="POST" commandName="loginForm" class="form-signin">
         <h2 class="form-signin-heading"><c:out value="${title}"/></h2>
         
         <label for="email" class="sr-only">${email}</label>
@@ -24,7 +23,7 @@
         <form:errors path="email" cssClass="error"/>
         
         <label for="password" class="sr-only">${password}</label>
-        <form:input path="password" class="form-control" placeholder="${password}"/>
+        <form:input path="password" type="password" class="form-control" placeholder="${password}"/>
         <form:errors path="password" cssClass="error"/>
        	<div class="checkbox">
           <!-- <label>
@@ -39,15 +38,15 @@
 	        </c:forEach>
 	    </spring:hasBindErrors>
 	    
-        <button class="btn btn-lg btn-primary btn-block" type="submit">${submit}</button>
+        <button class="hoverButton login-button" type="submit">
+			<span>${submit}</span>
+		</button>
+        
+        <div>
+			<h3 class="uppercase"><c:out value="${register_title}"/> <a href="register">${register_button}</a></h3>		
+		</div>
       </form:form>
-	</div>
-	<div class="col-sm-6">
-		<p class="uppercase"><c:out value="${register_title}"/></p>
-		<p><c:out value="${register_text1}"/></p>
-		<p><c:out value="${register_text2}"/></p>
-		<a class="btn btn-lg btn-primary btn-block" href="register">${register_button}</a>
-	</div>
+	
 </div>
     
 

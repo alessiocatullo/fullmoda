@@ -13,4 +13,6 @@ public interface ProductFacade {
 	List<ProductData> getProductList(String currency);
 	
 	ProductData findProduct(String code, String currency);
+		
+	ProductData findFromSize(String size);
 }

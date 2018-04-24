@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import it.sopra.stage.fullmoda.dto.CartData;
 import it.sopra.stage.fullmoda.dto.UserData;
 import it.sopra.stage.fullmoda.facade.AuthFacade;
 import it.sopra.stage.fullmoda.form.LoginForm;
@@ -55,8 +56,10 @@ public class LoginController {
 					null, currentLocale)));
 			return "login";
 		}
-		 model.addAttribute("user", userData);
-		 request.getSession().setAttribute("user", userData);
+		CartData cartData = loginFacade.newCart(userData);
+		model.addAttribute("user", userData);
+		request.getSession().setAttribute("user", userData);
+		request.getSession().setAttribute("cart", cartData);
 
 		return "redirect:/products";
 	}

@@ -21,6 +21,7 @@ public class LogoutController {
 		UserData user = (UserData)request.getSession().getAttribute("user");
 		LOG.info("Logging out user "+user);
 		request.getSession().removeAttribute("user");
+		request.getSession().removeAttribute("cart");
 		return "redirect:/home";
 	}
 }

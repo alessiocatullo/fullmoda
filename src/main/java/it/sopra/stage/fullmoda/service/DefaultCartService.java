@@ -35,5 +35,4 @@ public class DefaultCartService implements CartService {
 		//TODO
 		return 0;
 	}
-
 }

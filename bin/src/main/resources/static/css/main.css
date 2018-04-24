@@ -1,0 +1,150 @@
+/* GLOBAL
+-------------------------------------------------- */
+body {
+  padding-top: 2rem;
+  font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-size:1.3em;
+  
+}
+
+
+.error{
+	color:red;
+}
+.uppercase{
+	text-transform: uppercase;
+}
+
+footer {
+  /* position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px; Set the fixed height of the footer here
+  line-height: 60px; Vertically center the text there */
+  text-align:center;
+  padding-bottom:10px;
+
+}
+
+.jumbotron {
+	margin-bottom:0px;
+}
+
+/* NAVBAR
+-------------------------------------------------- */
+.navbar{
+	min-height:150px;
+}
+.navbar-header{
+	width:100%;
+	
+	margin-top:1em;
+}
+.navbar-inverse .navbar-brand{
+	color:#FFF;
+}
+.navbar-brand{
+	font-size:4em;
+	text-align:center;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	float:left;
+	width:80%;	
+	padding-left:20%;
+	display: inline-block;
+	font-color:#FFF;
+}
+.navbar-nav{
+	float:right;
+}
+.navbar-welcome {
+    float: left;
+    width:20%;
+    padding-top: 15px;
+    padding-right: 15px;
+    text-align:right;
+    color:white;
+}
+.navbar-subheader{
+	width:100%; 
+	float:right;
+}
+.subheader-left{
+	float:left;
+}
+/* BODY
+-------------------------------------------------- */
+.jumbotron{
+	background-color:#FFF;
+}
+.jumbotron p{
+	font-size:1.3em;
+}
+.container-fluid{
+	margin-top:150px;
+}
+/* LOGIN PAGE
+-------------------------------------------------- */
+.new-account-button{
+	border-color:#c8c6c5;
+	color:#313131;
+	background-color:transparent;
+	border-radius:0;
+	border-style:solid;
+	border-width:2px;
+	line-height:12px;
+	text-align:center;
+	padding-top:12px;
+	padding-bottom:12px;
+	letter-spacing:1.6px;
+	
+}
+.form-control{
+	margin:2px;
+}
+
+
+/* HOME PAGE CAROUSEL
+-------------------------------------------------- */
+.carousel {
+  margin-bottom: 4rem;
+}
+.item > img {
+  min-width: 100%;
+  
+}
+.featurette-image{
+	height: 500px;
+}
+
+/* PRODUCT PAGE 
+--------------------------------------------*/
+.img_product{
+	width:100%;
+}
+.col_product{
+	margin-left:4rem;
+}
+.col_product div{
+	width:100%;
+}
+.product-price{
+	border-bottom: 1px solid #c8c6c5;
+    padding-bottom: 15px;
+    position: relative;
+    font-size: larger;
+}
+.style-number-title {
+    line-height: 22px;
+    padding: 7px 0;
+}
+.style-color-material {
+   
+   
+}
+.product_desc {
+    margin-top: 15px;
+    border-top: 1px solid #c8c6c5;
+}
+.size-select{
+	display:none;
+}

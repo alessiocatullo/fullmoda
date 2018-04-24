@@ -12,22 +12,21 @@ public class CartController {
 
 	@Autowired
 	private CartFacade cartFacade;
-	
+
 	@GetMapping("/addToCart")
 	public int addToCart(final String productCode) {
 		return cartFacade.addToCart(productCode);
 	}
-	
+
 	@GetMapping("/removeProduct")
 	public int removeProduct(final String productCode, final int quantity) {
 		return cartFacade.removeFromCart(productCode, quantity);
 	}
-	
+
 	@GetMapping("/cart")
 	public CartData getCart(String email) {
-	
+
 		return cartFacade.getCartByUser(email);
 	}
-	
-	
+
 }

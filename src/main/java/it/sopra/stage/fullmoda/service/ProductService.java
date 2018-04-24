@@ -13,4 +13,6 @@ public interface ProductService {
 	Iterable<SizeVariantProduct> findSizeVariantProductList(String colorVariantCode);
 	
 	Iterable<ColorVariantProduct> findColorVariantProductList(String productCode);
+	
+	BaseProduct findFromSize(String code);
 }

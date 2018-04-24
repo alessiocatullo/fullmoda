@@ -12,7 +12,6 @@ public class ColorVariantProductData implements Serializable{
 
 	private String code;
 	private ColorData colorData;
-	
 	private List<SizeVariantProductData> variants;
 
 	

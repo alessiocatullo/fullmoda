@@ -14,44 +14,37 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name="size_product")
+@Table(name = "size_product")
 @Data
 @NoArgsConstructor
-public class SizeVariantProduct implements Serializable{
+public class SizeVariantProduct implements Serializable {
 
 	private static final long serialVersionUID = 806855520003430882L;
-	
+
 	@Id
 	private String code;
-	
-	@OneToOne(cascade= {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
-	@JoinColumn(name="size")
+
+	@OneToOne(cascade = { CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+	@JoinColumn(name = "size")
 	private Size size;
-	
-	@ManyToOne (cascade=CascadeType.ALL)
-	@JoinColumn(name="baseproduct")
+
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "baseproduct")
 	private ColorVariantProduct colorVariantProduct;
-	
 
 	public ColorVariantProduct getColorVariantProduct() {
 		return colorVariantProduct;
 	}
 
-
-
 	public void setColorVariantProduct(ColorVariantProduct colorVariantProduct) {
 		this.colorVariantProduct = colorVariantProduct;
 	}
-
-
 
 	public SizeVariantProduct(String code, Size size, ColorVariantProduct colorVariantProduct) {
 		this.code = code;
 		this.size = size;
 		this.colorVariantProduct = colorVariantProduct;
 	}
-
-
 
 	@Override
 	public int hashCode() {
@@ -60,8 +53,6 @@ public class SizeVariantProduct implements Serializable{
 		result = prime * result + ((code == null) ? 0 : code.hashCode());
 		return result;
 	}
-
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -79,8 +70,6 @@ public class SizeVariantProduct implements Serializable{
 			return false;
 		return true;
 	}
-
-
 
 	@Override
 	public String toString() {

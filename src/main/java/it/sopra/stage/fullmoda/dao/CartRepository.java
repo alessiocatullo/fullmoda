@@ -7,4 +7,5 @@ import it.sopra.stage.fullmoda.model.Cart;
 public interface CartRepository extends JpaRepository<Cart, Long> {
 
 	public Cart findByUserEmail(String email);
+
 }

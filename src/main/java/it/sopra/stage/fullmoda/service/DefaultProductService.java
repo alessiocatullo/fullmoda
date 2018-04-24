@@ -47,4 +47,10 @@ public class DefaultProductService implements ProductService {
 		return colorVariants;
 	}
 
+	@Override
+	public BaseProduct findFromSize(String code) {
+		BaseProduct baseProduct = sizeVariantRepository.findByCode(code).getColorVariantProduct().getBaseproduct();
+		return baseProduct;
+	}
+
 }

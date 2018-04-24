@@ -11,7 +11,6 @@ public class SizeVariantProductData implements Serializable{
 	
 	private String code;
 	private SizeData size;
-
 	
 	public SizeVariantProductData() {
 		

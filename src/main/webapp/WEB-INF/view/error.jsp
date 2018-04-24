@@ -1,12 +1,19 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Oops!</title>
-</head>
-<body>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
+<%@ taglib uri ="http://java.sun.com/jsp/jstl/core" prefix = "c" %>		
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix = "spring" uri = "http://www.springframework.org/tags" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>	
 
-</body>
-</html>
+<spring:message code = "error.button" var="error_button"/>
+
+<t:template>
+	<div class="row">
+	
+		<h2 class="erroreform">OPS! Questa pagina non esiste :(</h2>
+		<a href="../fullmoda" class="hoverButton">
+ 			<span>${error_button}</span>
+		</a>
+	</div>
+</t:template>

@@ -9,4 +9,5 @@ public interface CartService {
 	Cart getCartByUser(String email);
 	
 	int removeFromCart(String productCode, int quantity);
+
 }
