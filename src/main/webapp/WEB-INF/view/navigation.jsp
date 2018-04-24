@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix = "spring" uri = "http://www.springframework.org/tags" %>
 <%@ taglib uri ="http://java.sun.com/jsp/jstl/core" prefix = "c" %>		
 
@@ -9,6 +8,9 @@
  
  <nav class="nav-down navbar navbar-inverse navbar-fixed-top">
   
+<link rel="stylesheet" href="css/main.css"/>
+   
+<nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-header">
       <a class="navbar-brand" href="home"><spring:message code = "app.name"/></a>
       <div class="navbar-welcome">
@@ -34,9 +36,21 @@
 	      			<li><a href="logout"><spring:message code = "navigation.header.menu.logout"/></a></li>
 	      		</c:otherwise>
 	      	</c:choose>
+			<c:choose>
+	      		<c:when test="${user == null}">
+	      			 <li><a href="login"><spring:message code = "navigation.header.menu.cart"/></a></li>
+	      		</c:when>
+	      		<c:otherwise>
+	      			<li><a href="cart">
+	      				<i class="fas fa-shopping-cart">
+	      					<span class="fas fa-circle"></span>
+  							<span class="num"><c:out value="${quantity}"/></span>
+	      				</i>
+	      			</a></li>
+	      		</c:otherwise>
+	      	</c:choose>
 	    </ul>
     </div>
-    	<div id="snackbar">Completa il tuo profilo nella sezione "Modifica Nome"</div>
     
  </nav>
  
@@ -78,3 +92,4 @@
 
 
 </script>
+</nav>

@@ -20,13 +20,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import it.sopra.stage.fullmoda.dto.CartData;
 import it.sopra.stage.fullmoda.dto.UserData;
 import it.sopra.stage.fullmoda.facade.AuthFacade;
+import it.sopra.stage.fullmoda.facade.CartFacade;
 import it.sopra.stage.fullmoda.form.LoginForm;
 
 @Controller
 public class LoginController {
 
 	private static final Logger LOG = Logger.getLogger(LoginController.class);
-
+	
 	@Autowired
 	private AuthFacade loginFacade;
 

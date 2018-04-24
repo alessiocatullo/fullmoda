@@ -8,7 +8,9 @@
     <!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<!-- Custom css -->
-       <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <!-- Icon CSS -->
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet"> 
    
     </head>
 	<body>

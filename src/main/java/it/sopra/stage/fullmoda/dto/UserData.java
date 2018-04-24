@@ -11,7 +11,7 @@ import lombok.Data;
 public class UserData implements Serializable{
 
 	private static final long serialVersionUID = -3865741928764031868L;
-
+	
 	private long id;
 	private String name;
 	private String surname;
@@ -29,6 +29,7 @@ public class UserData implements Serializable{
 	}
 	
 	public UserData(long id, String name, String surname, String email, String image, Address address, String password, String phonenumber, String birthdate, String birthplace, String fiscalcode) {
+
 		this.id = id;
 		this.name = name;
 		this.surname = surname;

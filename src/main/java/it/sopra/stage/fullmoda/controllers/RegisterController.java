@@ -19,11 +19,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import it.sopra.stage.fullmoda.dto.CartData;
+import it.sopra.stage.fullmoda.dao.CartRepository;
+import it.sopra.stage.fullmoda.dao.UserRepository;
 import it.sopra.stage.fullmoda.dto.UserData;
 import it.sopra.stage.fullmoda.dto.UserTypeEnum;
 import it.sopra.stage.fullmoda.exception.UserAlreadyRegistered;
 import it.sopra.stage.fullmoda.facade.AuthFacade;
+import it.sopra.stage.fullmoda.facade.CartFacade;
 import it.sopra.stage.fullmoda.form.RegisterForm;
+import it.sopra.stage.fullmoda.model.Cart;
 
 @SessionAttributes("user")
 @Controller
