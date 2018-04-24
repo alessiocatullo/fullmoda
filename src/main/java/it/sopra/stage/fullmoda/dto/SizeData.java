@@ -12,8 +12,8 @@ public class SizeData implements Serializable{
 	private String code;
 	
 	public SizeData() {
-		
 	}
+	
 	public SizeData(String code) {
 		this.code = code;
 	}
@@ -22,6 +22,4 @@ public class SizeData implements Serializable{
 	public String toString() {
 		return "SizeData [code=" + code + "]";
 	}
-	
-	
 }

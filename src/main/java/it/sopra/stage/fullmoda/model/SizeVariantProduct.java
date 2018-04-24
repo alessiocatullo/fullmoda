@@ -37,21 +37,15 @@ public class SizeVariantProduct implements Serializable{
 		return colorVariantProduct;
 	}
 
-
-
 	public void setColorVariantProduct(ColorVariantProduct colorVariantProduct) {
 		this.colorVariantProduct = colorVariantProduct;
 	}
-
-
 
 	public SizeVariantProduct(String code, Size size, ColorVariantProduct colorVariantProduct) {
 		this.code = code;
 		this.size = size;
 		this.colorVariantProduct = colorVariantProduct;
 	}
-
-
 
 	@Override
 	public int hashCode() {
@@ -60,8 +54,6 @@ public class SizeVariantProduct implements Serializable{
 		result = prime * result + ((code == null) ? 0 : code.hashCode());
 		return result;
 	}
-
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -79,8 +71,6 @@ public class SizeVariantProduct implements Serializable{
 			return false;
 		return true;
 	}
-
-
 
 	@Override
 	public String toString() {

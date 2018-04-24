@@ -1,12 +1,17 @@
 package it.sopra.stage.fullmoda.facade;
 
 import it.sopra.stage.fullmoda.dto.CartData;
+import it.sopra.stage.fullmoda.dto.SizeVariantProductData;
 
 public interface CartFacade {
 
-	int addToCart(String productCode);
+	int addToCart(String code, long userId);
 	
-	CartData getCartByUser(String email);
+	int addOnesToCart(long codeEntry);
 	
-	int removeFromCart(String productCode, int quantity);
+	CartData findByUserId(long idUser);
+	
+	int removeFromCart(long codeEntry);
+	
+	int removeOnesFromCart(long codeEntry);
 }

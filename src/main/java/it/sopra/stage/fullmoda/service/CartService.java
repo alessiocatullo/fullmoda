@@ -1,12 +1,19 @@
 package it.sopra.stage.fullmoda.service;
 
 import it.sopra.stage.fullmoda.model.Cart;
+import it.sopra.stage.fullmoda.model.CartEntry;
 
 public interface CartService {
 
-	int addToCart(String productCode);
+	int addToCart(String sizeVariantProductCode, long userId);
 	
-	Cart getCartByUser(String email);
+	int addOnesToCart(long codeEntry);
 	
-	int removeFromCart(String productCode, int quantity);
+	Cart findByUserId(long id);
+	
+	CartEntry findByCartAndProduct(Long cartId, String productCode);
+	
+	int removeFromCart(long codeEntry);
+	
+	int removeOnesFromCart(long codeEntry);
 }

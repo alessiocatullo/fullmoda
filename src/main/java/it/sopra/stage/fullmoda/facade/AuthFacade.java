@@ -8,7 +8,7 @@ import it.sopra.stage.fullmoda.form.RegisterForm;
 public interface AuthFacade {
 
 	UserData validateUser(String email, String password);
-	
+		
 	UserData register(RegisterForm registerForm, UserTypeEnum.USERTYPE userType) throws UserAlreadyRegistered;
 	
 }

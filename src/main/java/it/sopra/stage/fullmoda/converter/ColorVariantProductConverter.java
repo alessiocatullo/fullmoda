@@ -9,6 +9,8 @@ import org.springframework.stereotype.Component;
 import it.sopra.stage.fullmoda.dto.ColorData;
 import it.sopra.stage.fullmoda.dto.ColorVariantProductData;
 import it.sopra.stage.fullmoda.dto.SizeVariantProductData;
+import it.sopra.stage.fullmoda.model.BaseProduct;
+import it.sopra.stage.fullmoda.model.Color;
 import it.sopra.stage.fullmoda.model.ColorVariantProduct;
 import it.sopra.stage.fullmoda.model.SizeVariantProduct;
 
@@ -20,7 +22,9 @@ public class ColorVariantProductConverter {
 	
 	@Autowired
 	private SizeVariantProductConverter sizeVariantConverter;
-	
+
+	@Autowired
+	private BaseProductConverter productConverter;
 	
 	public ColorVariantProductData convert(ColorVariantProduct product) {
 		String code = product.getCode();
@@ -32,6 +36,6 @@ public class ColorVariantProductConverter {
 			SizeVariantProductData sizeProductData = sizeVariantConverter.convert(sizeProduct);
 			sizeVariantDataList.add(sizeProductData);
 		}
-		return new ColorVariantProductData(code, color, sizeVariantDataList);
+		return new ColorVariantProductData(code, color,sizeVariantDataList);
 	}
 }

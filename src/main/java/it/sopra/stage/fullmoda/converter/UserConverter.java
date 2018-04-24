@@ -9,7 +9,7 @@ import it.sopra.stage.fullmoda.model.User;
 public class UserConverter {
 
 	public UserData convert(User user) {
-		UserData userData = new UserData(user.getName(), user.getSurname(), user.getEmail());
+		UserData userData = new UserData(user.getId(), user.getName(), user.getSurname(), user.getEmail());
 		return userData;
 	}
 }

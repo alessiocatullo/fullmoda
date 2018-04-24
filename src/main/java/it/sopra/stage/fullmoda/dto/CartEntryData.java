@@ -27,8 +27,4 @@ public class CartEntryData implements Serializable{
 	public String toString() {
 		return "CartEntryData [id=" + id + ", product=" + product + ", quantity=" + quantity + "]";
 	}
-	
-	
-	
-	
 }

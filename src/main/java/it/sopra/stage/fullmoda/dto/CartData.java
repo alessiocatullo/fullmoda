@@ -17,7 +17,6 @@ public class CartData implements Serializable{
 	private WebsiteData website;
 	
 	public CartData() {
-		
 	}
 			
 	

@@ -1,6 +1,7 @@
 package it.sopra.stage.fullmoda.dto;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import lombok.Data;
@@ -12,7 +13,7 @@ public class ColorVariantProductData implements Serializable{
 
 	private String code;
 	private ColorData colorData;
-	
+	private ProductData product;
 	private List<SizeVariantProductData> variants;
 
 	
@@ -38,6 +39,18 @@ public class ColorVariantProductData implements Serializable{
 		this.variants = variants;
 	}
 	
+	public void addSizeVariantProductData(SizeVariantProductData sizeVariantProductData) {
+		if(this.variants == null) {
+			this.variants = new ArrayList<SizeVariantProductData>();
+		}
+		this.variants.add(sizeVariantProductData);
+	}
 	
+	public void addSizeVariantProductDataList(List<SizeVariantProductData> sizeVariantProductDataList) {
+		if(this.variants == null) {
+			this.variants = new ArrayList<SizeVariantProductData>();
+		}
+		this.variants.addAll(sizeVariantProductDataList);
+	}
 	
 }
